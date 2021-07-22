@@ -14,9 +14,20 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- JS Hashes -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jshashes/1.0.8/hashes.min.js" integrity="sha512-1HyPmPHvi5wFUctYkBhwOYgXmMdbPrDaXKBrbGRI3o1CQkTKazG/RKqR8QwVIjTDOQ3uAOPOFkEbzi99Td6yiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Moment JS -->
+    <script defer src="js/moment.min.js"></script>
   </head>
 
   <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-menu is-active">
+        <a class="navbar-item" href="index.html">
+          Send Your Message
+        </a>
+      </div>
+    </nav>
     <section class="hero is-fullheight">
         <div class="content">
             <h2 class="has-text-centered mt-6">View Your Messages!</h2>
@@ -29,7 +40,7 @@
                         <input class="input is-medium is-rounded" type="text" placeholder="What's the passcode?" id="passcode" required />
                     </div>
                 </div>
-                <button class="button is-block is-fullwidth is-primary is-medium is-rounded" onclick="getMessages()">
+                <button class="button is-block is-fullwidth is-primary is-medium is-rounded" onclick="getMessages()" id="viewMsg">
                     Click Here
                 </button>
             </form>
@@ -37,7 +48,12 @@
             </div>
         </div>
         <section class="container">
-            <h2 id="message" class="subtitle is-4"></h2>
+            <div class="card" id="message" style="display: none;">
+                <div class="card-content">
+                    <div class="content" id="cardContent">
+                    </div>
+                </div>
+            </div>
         </section>
 
     </section>
