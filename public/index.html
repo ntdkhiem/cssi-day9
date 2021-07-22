@@ -15,6 +15,10 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- JS Hashes -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jshashes/1.0.8/hashes.min.js" integrity="sha512-1HyPmPHvi5wFUctYkBhwOYgXmMdbPrDaXKBrbGRI3o1CQkTKazG/RKqR8QwVIjTDOQ3uAOPOFkEbzi99Td6yiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Moment JS -->
+    <script defer src="js/moment.min.js"></script>
   </head>
 
   <body>
@@ -34,6 +38,7 @@
             <div class="field">
               <div class="control">
                 <input class="input is-medium is-rounded" type="text" id="passcode" placeholder="Enter a passcode" required />
+                <input class="input is-medium is-rounded mt-2" type="text" id="author" placeholder="Your name" required />
               </div>
             </div>
             <div class="field">
@@ -42,7 +47,7 @@
               </div>
             </div>
             <br />
-            <button class="button is-block is-fullwidth is-primary is-medium is-rounded">
+            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" onclick="submitMessage()">
               Send Message
             </button>
           </form>
@@ -51,7 +56,7 @@
       </div>
     </section>
     
-    <script src="js/writeMessage.js"></script>
+    <script src="js/writeMessage.js" ></script>
   </body>
 
 </html>
